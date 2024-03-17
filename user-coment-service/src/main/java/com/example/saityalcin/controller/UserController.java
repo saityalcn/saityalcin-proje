@@ -7,6 +7,7 @@ import com.example.saityalcin.request.UserSaveRequest;
 import com.example.saityalcin.request.UserUpdateRequest;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.repository.query.Param;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
