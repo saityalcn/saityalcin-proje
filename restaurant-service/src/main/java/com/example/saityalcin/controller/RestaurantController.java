@@ -9,6 +9,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.Map;
 
 @RestController
@@ -20,7 +21,7 @@ public class RestaurantController {
 
 
     @GetMapping
-    public Page<RestaurantDTO> findAll(){
+    public List<RestaurantDTO> findAll(){
         return contract.findAll();
     }
 
@@ -35,8 +36,8 @@ public class RestaurantController {
     }
 
     @DeleteMapping("/{id}")
-    public Map<String, Boolean> delete(@PathVariable Long id){
-        return contract.delete(id);
+    public void delete(@PathVariable Long id){
+        contract.delete(id);
     }
 
 

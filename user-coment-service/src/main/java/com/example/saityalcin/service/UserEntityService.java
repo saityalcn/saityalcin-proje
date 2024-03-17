@@ -4,6 +4,7 @@ import com.example.saityalcin.dao.UserRepository;
 import com.example.saityalcin.dto.RestaurantDTO;
 import com.example.saityalcin.entity.User;
 import com.example.saityalcin.service.generic.GenericEntityService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
@@ -19,6 +20,7 @@ public class UserEntityService extends GenericEntityService<User, UserRepository
     private String RESTAURANT_API_URL;
     private final RestTemplate restTemplate;
 
+    @Autowired
     protected UserEntityService(UserRepository repository, RestTemplate restTemplate) {
         super(repository);
         this.restTemplate = restTemplate;

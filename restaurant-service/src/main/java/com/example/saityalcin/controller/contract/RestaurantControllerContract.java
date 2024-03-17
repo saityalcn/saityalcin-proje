@@ -17,6 +17,6 @@ public interface RestaurantControllerContract {
 
     RestaurantDTO update(Long id, RestaurantUpdateRequest updateRequest);
 
-
+    void delete(Long id);
 
 }

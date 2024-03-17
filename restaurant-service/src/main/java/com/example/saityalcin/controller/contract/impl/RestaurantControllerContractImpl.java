@@ -44,4 +44,9 @@ public class RestaurantControllerContractImpl implements RestaurantControllerCon
         return RestaurantMapper.INSTANCE.convertToDTO(service.save(model));
     }
 
+    @Override
+    public void delete(Long id) {
+        service.delete(id);
+    }
+
 }
